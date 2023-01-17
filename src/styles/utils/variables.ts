@@ -98,6 +98,23 @@ const sizes = {
   containerHeader: "6.4rem",
 };
 
-const variables = { palette, fonts, sizes };
+const shadows = {
+  shadowSm: "0 0.1rem 0.2rem 0 hsla(0, 0%, 0%, 0.05)",
+  shadow:
+    "0 0.1rem 0.2rem 0 hsla(0, 0%, 0%, 0.06), 0 0.1rem 0.3rem 0 hsla(0, 0%, 0%, 0.1)",
+  shadowMd:
+    "0 0.2rem 0.4rem -0.1rem hsla(0, 0%, 0%, 0.06), 0 0.4rem 0.6rem -0.1rem hsla(0, 0%, 0%, 0.1)",
+  shadowLg:
+    "0 0.4rem 0.6rem -0.2rem hsla(0, 0%, 0%, 0.05), 0 1rem 1.5rem -0.3rem hsla(0, 0%, 0%, 0.1)",
+  shadowXl:
+    "0 1rem 1rem -0.5rem hsla(0, 0%, 0%, 0.04), 0 2rem 2.5rem -0.5rem hsla(0, 0%, 0%, 0.1)",
+  shadow2Xl: "0px 2.5rem 5rem -1.2rem hsla(0, 0%, 0%, 0.25)",
+};
+
+const gradients = {
+  gradientBanner:
+    "linear-gradient(90deg, hsla(328, 75%, 45%, 1) 0%, hsla(269, 85%, 41%, 1) 100%)",
+};
+const variables = { palette, fonts, sizes, shadows, gradients };
 
 export default variables;

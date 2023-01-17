@@ -49,16 +49,19 @@ const typography = css`
     font-display: swap;
   }
 
+  @font-face {
+    font-family: "Rota-Bold";
+    src: url("/fonts/rota/Rota-Bold.otf") format("opentype");
+    font-style: normal;
+    font-display: swap;
+  }
+
   body {
     font-family: "Manrope-Bigger-Regular", "Manrope-Bigger-Semibold",
       "Manrope-Normal-Regular", "Manrope-Normal-Semibold",
-      "Manrope-Small-Regular", "Manrope-Small-Semibold", sans-serif;
+      "Manrope-Small-Regular", "Manrope-Small-Semibold", "Rota-Bold", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  p {
-    margin: 0;
   }
 
   .text {
@@ -127,17 +130,50 @@ const typography = css`
   }
 
   h1 {
-    color: var(--palette-black);
-    font-weight: 500;
-    flex: 1;
-    font-size: 2.4rem;
+    font-family: "Rota-Bold";
+    font-size: 4.8rem;
+    line-height: 6.7rem;
     text-transform: capitalize;
+  }
+
+  h2 {
+    font-family: "Rota-Bold";
+    font-size: 4rem;
+    line-height: 5.6rem;
+    text-transform: none;
+  }
+
+  h3 {
+    font-family: "Rota-Bold";
+    font-size: 3.2rem;
+    line-height: 4.5rem;
+    text-transform: capitalize;
+  }
+
+  h4 {
+    font-family: "Rota-Bold";
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    text-transform: capitalize;
+  }
+
+  p {
+    margin: 0;
+    font-family: "Manrope-Normal-Regular";
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    font-weight: 400;
+    color: var(--palette-text);
   }
 
   button {
     font-family: "Manrope-Normal-Semibold";
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+  }
+
+  span {
+    display: block;
   }
 `;
 
