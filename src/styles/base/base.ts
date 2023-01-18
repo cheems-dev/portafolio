@@ -7,7 +7,7 @@ const base = css`
   *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   :root {
@@ -151,6 +151,16 @@ const base = css`
   .GlobalStyles {
     &__container {
       width: 80vw;
+
+      &--center {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &__padding {
+      padding-top: 8.6rem;
+      padding-bottom: 8.6rem;
     }
   }
 `;

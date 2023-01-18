@@ -110,6 +110,37 @@ const animations = css`
       transform: translateX(0px);
     }
   }
+
+  @-moz-keyframes rotate-icon {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(25deg);
+      transform: rotate(25deg);
+    }
+  }
+  @-webkit-keyframes rotate-icon {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(25deg);
+      transform: rotate(25deg);
+    }
+  }
+  @keyframes rotate-icon {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(25deg);
+      transform: rotate(25deg);
+    }
+  }
 `;
 
 export default animations;

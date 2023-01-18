@@ -9,7 +9,9 @@ const BannerStyled = styled.div<Props>`
   .Banner {
     &__container {
       background-image: ${gradients.gradientBanner};
-      padding: 12rem 12.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &--info {
         animation: side-content-text 0.8s ease-in-out;
@@ -53,7 +55,7 @@ const BannerStyled = styled.div<Props>`
 
     &__text {
       &--title {
-        color: var(--palette-purple600);
+        color: var(--palette-purple700);
 
         &-secondary {
           color: var(--palette-purple50);

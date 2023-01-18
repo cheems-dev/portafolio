@@ -3,11 +3,12 @@
 import Navbar from "@/components/Navbar/Navbar";
 import GlobalStyles from "@/styles/base";
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
-}) {
+}
+export default function RootLayout(props: RootLayoutProps) {
+  const { children } = props;
+
   return (
     <html>
       <head />

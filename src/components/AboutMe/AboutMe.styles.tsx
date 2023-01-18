@@ -8,25 +8,36 @@ const AboutMeStyled = styled.div<Props>`
       display: flex;
       justify-content: center;
 
+      &--global {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12rem;
+      }
+
       &--aboutMe {
         display: flex;
         flex-direction: column;
-      }
-
-      &--text {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        border-bottom: 0.1rem solid var(--palette-border);
-      }
-
-      &--stack {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        margin: 2rem auto;
         gap: 1.6rem;
-        height: 22.4rem;
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          border-bottom: 0.1rem solid var(--palette-border);
+        }
+
+        &-stack {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          gap: 1.6rem;
+          height: 22.4rem;
+        }
+      }
+
+      &--swipper {
+        width: 36rem;
       }
     }
 
@@ -43,6 +54,24 @@ const AboutMeStyled = styled.div<Props>`
           padding: 0.4rem;
           border-radius: 50%;
           padding: 0.8rem;
+        }
+      }
+
+      &--slide {
+        &-container {
+          display: flex;
+          flex-direction: column;
+          gap: 3.2rem;
+        }
+
+        &-title {
+          color: var(--palette-white);
+          text-align: center;
+        }
+
+        &-image {
+          margin: auto;
+          animation: rotate-icon 4s ease-in-out alternate-reverse infinite;
         }
       }
     }

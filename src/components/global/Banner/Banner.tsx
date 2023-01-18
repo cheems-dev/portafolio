@@ -8,7 +8,7 @@ import { BannerProps as Props } from "./Banner.types";
 const Banner: React.FC<Props> = (props) => {
   return (
     <Styles className={`Banner`}>
-      <div className="Banner__container">
+      <div className="GlobalStyles__padding Banner__container">
         <div className="GlobalStyles__container Banner__container--banner">
           <div className="Banner__container--info">
             <div>

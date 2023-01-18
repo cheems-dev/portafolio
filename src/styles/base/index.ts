@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import themes from "../theme";
 
 import cssVariables from "../utils/cssVariables";
-import variables from "../utils/variables";
 import animations from "./animations";
 import base from "./base";
 import typography from "./typography";

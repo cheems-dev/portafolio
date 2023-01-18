@@ -1,37 +1,34 @@
-import Image from "next/image";
-import { items } from "./AboutMe.helpers";
+import { SwiperSlide } from "swiper/react";
+
+import { IconsComponent, SlideComponent } from "./AboutMe.helpers";
+import { items, softSkills } from "./AboutMe.helpers";
 import Styles from "./AboutMe.styles";
 import { AboutMeProps as Props } from "./AboutMe.types";
+import SwiperCards from "../global/SwiperCards/SwiperCards";
 
 const AboutMe: React.FC<Props> = (props) => {
-  const renderIcons = (
-    index: number,
-    item: { icon: string; title: string }
-  ) => (
-    <div key={index} className="AboutMe__component--icon-container">
-      <div className="AboutMe__component--icon-circle">
-        <Image
-          src={`/stack/${item.icon}`}
-          alt={item.title}
-          className="AboutMe__component--icon-image"
-          width={24}
-          height={24}
-        />
-      </div>
-      <p>{item.title}</p>
-    </div>
+  const renderSwiper = () => (
+    <SwiperCards>
+      {softSkills.map((skill, index) => (
+        <SwiperSlide key={index}>
+          <SlideComponent
+            src={`/soft-skill/${skill.image}`}
+            title={skill.title}
+          />
+        </SwiperSlide>
+      ))}
+    </SwiperCards>
   );
 
   return (
     <Styles className={`AboutMe`}>
-      <div className="AboutMe__container">
-        <div className="GlobalStyles__container">
+      <div className="GlobalStyles__padding AboutMe__container">
+        <div className="GlobalStyles__container AboutMe__container--global">
           <div className="AboutMe__container--aboutMe">
-            {/* TODO: Reuse title  */}
             <h2 className="AboutMe__title">
               <span>01.</span> Sobre mí
             </h2>
-            <div className="AboutMe__container--text">
+            <div className="AboutMe__container--aboutMe-text">
               <p>
                 Me llamo <b>Luis Ccalluchi Lopez,</b> soy de{" "}
                 <b>Arequipa, Perú</b> y desarrollo productos digitales centrados
@@ -46,10 +43,17 @@ const AboutMe: React.FC<Props> = (props) => {
                 aprendiendo sobre la Arquitectura de <b>Micro-Frontend.</b>
               </p>
             </div>
+            <div className="AboutMe__container--aboutMe-stack">
+              {items.map((item, index) => (
+                <IconsComponent
+                  key={index}
+                  src={`/stack/${item.icon}`}
+                  title={item.title}
+                />
+              ))}
+            </div>
           </div>
-          <div className="AboutMe__container--stack">
-            {items.map((item, index) => renderIcons(index, item))}
-          </div>
+          <div className="AboutMe__container--swipper">{renderSwiper()}</div>
         </div>
       </div>
     </Styles>

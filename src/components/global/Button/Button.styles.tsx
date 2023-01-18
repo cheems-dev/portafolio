@@ -18,19 +18,19 @@ const Button = styled.div<Props>`
     box-shadow: ${shadows.shadow};
 
     &__outlined {
-      border: 0.2rem solid var(--palette-purple400);
+      border: 0.2rem solid var(--palette-purple500);
       background-color: inherit;
-      color: var(--palette-purple400);
+      color: var(--palette-purple500);
     }
 
     &__contained {
-      background-color: var(--palette-purple300);
+      background-color: var(--palette-purple500);
       color: var(--palette-white);
       border-color: inherit;
     }
 
     &__text {
-      color: var(--palette-purple400);
+      color: var(--palette-purple500);
       background-color: inherit;
       background-color: var(--palette-white);
     }
