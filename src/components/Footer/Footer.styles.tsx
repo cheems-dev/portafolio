@@ -1,3 +1,4 @@
+import { devices } from "@/utils/config/devices";
 import styled from "styled-components";
 
 import { FooterProps as Props } from "./Footer.types";
@@ -6,12 +7,12 @@ const Footer = styled.div<Props>`
   .Footer {
     &__subtitle {
       font-weight: 600;
-      margin:13px 0;
+      margin: 1.6rem 0;
     }
     
     &__card__icon_text {
       display: flex;
-      gap: 9px;
+      gap: 0.8rem;
       align-items: center;
     }
 
@@ -21,18 +22,18 @@ const Footer = styled.div<Props>`
       width: 100%;
       flex-direction: column;
 
-      @media (min-width: 769px) {
+      @media (${devices.tablet}) {
         flex-direction: row;
       }
 
       &--0 {
-        padding: 70px 80px;
+        padding: 7rem 8rem;
         color: var(--palette-text);
-        font-size: 14px;
+        font-size: 1.4rem;
       }
 
       &--2 {
-        @media (min-width: 769px) {
+        @media (${devices.tablet}) {
           align-items: flex-end;
         }
       }
@@ -40,12 +41,12 @@ const Footer = styled.div<Props>`
 
     &__logo {
       display: inline-block;
-      height: 40px;
+      height: 4rem;
       flex-grow: 1;
       background-image:url(./logo.svg);
       background-size: contain;
       background-repeat: no-repeat;
-      margin-bottom: 30px;
+      margin-bottom: 3.2rem;
     }
     
     &__sections_links {
@@ -55,24 +56,24 @@ const Footer = styled.div<Props>`
       text-align: left;
       flex-direction: column;
 
-      @media (min-width: 769px) {
+      @media (${devices.tablet}) {
         width: auto;
-        margin-bottom: 73px;
+        margin-bottom: 7.2rem;
         width: 30%;
       }
 
-      @media (min-width: 1024px) {
+      @media (${devices.laptop}) {
         flex-direction: row;
       }
 
-      @media (min-width: 1440px) {
+      @media (${devices.laptopL}) {
         width: 25%;
       }
 
       & li {
         display: block;
         width:50%;
-        margin-bottom: 23px;
+        margin-bottom: 2.4rem;
       }
 
       & a {
@@ -82,16 +83,16 @@ const Footer = styled.div<Props>`
 
     &__social-medias {
       display: flex;
-      gap: 23px;
+      gap: 2.4rem;
       flex-grow: 1;
       order: 2;
       font-color: red;
       color: secondary;
       fill: "green";
 
-      @media (min-width: 769px) {
+      @media (${devices.tablet}) {
         order: 1;
-        gap: 13px;
+        gap: 1.2rem;
       }
 
       & a {
@@ -103,30 +104,29 @@ const Footer = styled.div<Props>`
       width: auto;
       flex-wrap: wrap;
       order: 1;
-      margin-bottom: 53px;
+      margin-bottom: 5.2rem;
       
-      @media (min-width: 769px) {
+      @media (${devices.tablet}) {
         order: 2;
         margin-bottom: 0;
         width: 30%;
       }
 
-      @media (min-width: 1440px) {
+      @media (${devices.laptopL}) {
         width: 25%;
       }
 
       &__container {
         display: flex;
         flex-direction: column;
-        gap: 23px;
+        gap: 2.4rem;
 
-        @media (min-width: 1024px) {
+        @media (${devices.laptop}) {
           flex-direction: row;
-          gap: 43px;
+          gap: 4.4rem;
         }
       }
     }
-  
   }
 `;
 

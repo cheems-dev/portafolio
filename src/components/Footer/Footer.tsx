@@ -1,5 +1,6 @@
 import Styles from "./Footer.styles";
-import { FooterProps as Props } from "./Footer.types";
+import { FooterProps as Props, IconCardProps} from "./Footer.types";
+
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -9,17 +10,11 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Footer: React.FC<Props> = (props) => {
 
-  const card__icon_text = (
-    icon: any,
-    msg: string
-  ) => {
+  const card__icon_text = ({icon,msg}: IconCardProps) => {
     return <div className="Footer__card__icon_text" >{icon}{msg}</div>
   }
 
-  const card__link_icon = (
-    icon: any,
-    href: string
-  ) => {
+  const card__link_icon = ({icon,href}: IconCardProps) => {
     return <a href={`${href}`}> {icon} </a>
   }
 
@@ -42,16 +37,16 @@ const Footer: React.FC<Props> = (props) => {
           <div className="Footer__contact-me">
             <p className="Footer__subtitle">Cont&aacute;ctame</p>
             <div className="Footer__contact-me__container">
-              {card__icon_text(<CallIcon/>,"938296302")}
-              {card__icon_text(<EmailIcon/>,"daprimovaria@gmail.com")}
+              {card__icon_text({icon: <CallIcon/>, msg: "938296302"})}
+              {card__icon_text({icon: <EmailIcon/>, msg: "daprimovaria@gmail.com"})}
             </div>
           </div>
 
           <div className="Footer__social-medias">
-              {card__link_icon(<LinkedInIcon fontSize="large"/>,"link")}
-              {card__link_icon(<WhatsAppIcon fontSize="large"/>,"link")}
-              {card__link_icon(<InstagramIcon fontSize="large"/>,"link")}
-              {card__link_icon(<FacebookIcon fontSize="large"/>,"https://www.facebook.com/")}
+              {card__link_icon({icon: <LinkedInIcon fontSize="large"/>, href: "link"})}
+              {card__link_icon({icon: <WhatsAppIcon fontSize="large"/>, href: "link"})}
+              {card__link_icon({icon: <InstagramIcon fontSize="large"/>, href: "link"})}
+              {card__link_icon({icon: <FacebookIcon fontSize="large"/>, href: "https://www.facebook.com/"})}
           </div>
         </div>
 
