@@ -1,3 +1,4 @@
+import { devices } from "@/utils/config/devices";
 import styled from "styled-components";
 
 import { ExperienceStyledProps as Props } from "./Experience.types";
@@ -7,7 +8,12 @@ const ExperienceStyled = styled.div<Props>`
     &__container {
       display: flex;
       flex-direction: column;
-      gap: 8rem;
+      gap: 6rem;
+
+      @media only screen and (${devices.laptop}) {
+        flex-direction: row;
+        gap: 8rem;
+      }
 
       &--project {
         margin-bottom: 336px;

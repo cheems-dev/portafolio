@@ -1,3 +1,4 @@
+import { devices } from "@/utils/config/devices";
 import { css } from "styled-components";
 
 const base = css`
@@ -151,6 +152,18 @@ const base = css`
   .GlobalStyles {
     &__container {
       width: 80vw;
+
+      @media only screen and (${devices.laptopL}) {
+        width: 72vw;
+      }
+
+      @media only screen and (${devices.laptopXL}) {
+        width: 56vw;
+      }
+
+      @media only screen and (${devices.desktop}) {
+        width: 40%;
+      }
 
       &--center {
         display: flex;

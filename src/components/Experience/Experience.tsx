@@ -27,13 +27,8 @@ const Experience: React.FC<Props> = (props) => {
           {renderContext()}
           {/* TODO: Pending */}
           {projects.map((project, index) => {
-            const { name, image, year } = project;
-            const {
-              type_project,
-              description,
-              tecnologies: technologies,
-              link,
-            } = project;
+            const { name, image, year, link } = project;
+            const { type_project, description, technologies } = project;
 
             return (
               <div className="Experience__container--project" key={index}>
@@ -72,7 +67,7 @@ const Experience: React.FC<Props> = (props) => {
                           />
                         </div>
 
-                        <p>{technology.tech_image}</p>
+                        <p>{technology.tech_title}</p>
                       </div>
                     ))}
                   </div>

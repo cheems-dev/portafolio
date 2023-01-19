@@ -1,3 +1,4 @@
+import { devices } from "@/utils/config/devices";
 import styled from "styled-components";
 
 import { AboutMeStyledProps as Props } from "./AboutMe.types";
@@ -12,7 +13,13 @@ const AboutMeStyled = styled.div<Props>`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 12rem;
+        gap: 6rem;
+        flex-direction: column;
+
+        @media only screen and (${devices.laptop}) {
+          flex-direction: row;
+          gap: 12rem;
+        }
       }
 
       &--aboutMe {
