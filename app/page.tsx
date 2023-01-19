@@ -1,13 +1,11 @@
 "use client";
 
-import AboutMe from "@/components/AboutMe/AboutMe";
-import Banner from "@/components/global/Banner/Banner";
+import HomeContainerContainer from "@/containers/Home/Home.container";
 
 function page() {
   return (
     <main>
-      <Banner />
-      <AboutMe />
+      <HomeContainerContainer />
     </main>
   );
 }

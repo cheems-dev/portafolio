@@ -1,0 +1,31 @@
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.6rem;
+  box-shadow: 0 0.2rem 0.4rem -0.1rem hsla(0, 0%, 0%, 0.06),
+    0 0.4rem 0.6rem -0.1rem hsla(0, 0%, 0%, 0.1);
+
+  background: radial-gradient(
+    circle,
+    var(--palette-purple100) 0%,
+    var(--palette-purple500) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    var(--palette-purple100) 0%,
+    var(--palette-purple500) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    var(--palette-purple100) 0%,
+    var(--palette-purple500) 100%
+  );
+}

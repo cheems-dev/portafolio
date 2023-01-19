@@ -1,3 +1,4 @@
+import { devices } from "@/utils/config/devices";
 import { css } from "styled-components";
 
 const base = css`
@@ -7,7 +8,7 @@ const base = css`
   *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   :root {
@@ -151,6 +152,28 @@ const base = css`
   .GlobalStyles {
     &__container {
       width: 80vw;
+
+      @media only screen and (${devices.laptopL}) {
+        width: 72vw;
+      }
+
+      @media only screen and (${devices.laptopXL}) {
+        width: 56vw;
+      }
+
+      @media only screen and (${devices.desktop}) {
+        width: 40%;
+      }
+
+      &--center {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &__padding {
+      padding-top: 8.6rem;
+      padding-bottom: 8.6rem;
     }
   }
 `;

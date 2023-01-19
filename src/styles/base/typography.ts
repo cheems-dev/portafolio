@@ -1,3 +1,4 @@
+import { devices } from "@/utils/config/devices";
 import { css } from "styled-components";
 
 const typography = css`
@@ -64,83 +65,28 @@ const typography = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .text {
-    color: var(--palette-black);
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-
-    &--bold {
-      font-weight: 500;
-    }
-
-    &--link {
-      color: var(--palette-primary);
-      font-weight: 500;
-    }
-
-    &--error {
-      color: var(--palette-error);
-      font-size: 1.4rem;
-    }
-
-    &--link-secondary {
-      font-size: 1.2rem;
-    }
-
-    &--white {
-      color: var(--palette-white);
-    }
-
-    &--gray {
-      color: var(--palette-gray-s0-l68);
-      opacity: 0.6;
-    }
-  }
-
-  .fs {
-    &--12 {
-      font-size: 1.2rem;
-    }
-
-    &--14 {
-      font-size: 1.4rem;
-    }
-
-    &--20 {
-      font-size: 2rem;
-    }
-
-    &--24 {
-      font-size: 2.4rem;
-    }
-
-    &--30 {
-      font-size: 3rem;
-    }
-  }
-
-  .fw {
-    &--400 {
-      font-weight: 400;
-    }
-
-    &--500 {
-      font-weight: 500;
-    }
-  }
-
   h1 {
     font-family: "Rota-Bold";
-    font-size: 4.8rem;
-    line-height: 6.7rem;
+    font-size: 3.2rem;
+    line-height: 5.6rem;
     text-transform: capitalize;
+
+    @media only screen and (${devices.laptop}) {
+      font-size: 4.8rem;
+      line-height: 6.7rem;
+    }
   }
 
   h2 {
     font-family: "Rota-Bold";
-    font-size: 4rem;
-    line-height: 5.6rem;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
     text-transform: none;
+
+    @media only screen and (${devices.laptop}) {
+      font-size: 4rem;
+      line-height: 5.6rem;
+    }
   }
 
   h3 {
@@ -148,6 +94,11 @@ const typography = css`
     font-size: 3.2rem;
     line-height: 4.5rem;
     text-transform: capitalize;
+
+    @media only screen and (${devices.laptop}) {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+    }
   }
 
   h4 {
@@ -164,6 +115,11 @@ const typography = css`
     line-height: 3.2rem;
     font-weight: 400;
     color: var(--palette-text);
+
+    @media only screen and (${devices.laptop}) {
+      line-height: 2.4rem;
+      font-weight: 300;
+    }
   }
 
   button {

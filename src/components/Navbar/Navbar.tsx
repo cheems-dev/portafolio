@@ -8,16 +8,14 @@ import { NavbarProps as Props } from "./Navbar.types";
 const Navbar: React.FC<Props> = (props) => {
   return (
     <Styles className={`Navbar`}>
-      <div className="Navbar__container">
-        <div className="Navbar__component">
-          <Image src="./logo.svg" alt="logo" width={120} height={40} />
-          <Button
-            type="contained"
-            endIcon={<ChevronRightIcon fontSize="large" />}
-          >
-            Trabajemos juntos
-          </Button>
-        </div>
+      <div className="Navbar__component">
+        <Image src="./logo.svg" alt="logo" width={120} height={40} />
+        <Button
+          type="contained"
+          endIcon={<ChevronRightIcon fontSize="large" />}
+        >
+          Trabajemos juntos
+        </Button>
       </div>
     </Styles>
   );
