@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import GlobalStyles from "@/styles/base";
 
@@ -16,6 +17,7 @@ export default function RootLayout(props: RootLayoutProps) {
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

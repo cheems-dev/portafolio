@@ -32,13 +32,6 @@ const Experience: React.FC<Props> = (props) => {
 
             return (
               <div className="Experience__container--project" key={index}>
-                <div className="Experience__component--image">
-                  <img
-                    className="Experience__component--image-component"
-                    src={`/projects/feactured/${image}`}
-                    alt={`${image} - ${type_project}`}
-                  />
-                </div>
                 <div className="Experience__component--content">
                   <div>
                     <p className="Experience__component--content-text">
@@ -73,6 +66,13 @@ const Experience: React.FC<Props> = (props) => {
                   </div>
 
                   <Button type="outlined">Link al proyecto</Button>
+                </div>
+                <div className="Experience__component--image">
+                  <img
+                    className="Experience__component--image-component"
+                    src={`/projects/feactured/${image}`}
+                    alt={`${image} - ${type_project}`}
+                  />
                 </div>
               </div>
             );

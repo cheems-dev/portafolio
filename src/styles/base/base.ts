@@ -162,7 +162,7 @@ const base = css`
       }
 
       @media only screen and (${devices.desktop}) {
-        width: 40%;
+        width: 50%;
       }
 
       &--center {

@@ -10,47 +10,56 @@ const ExperienceStyled = styled.div<Props>`
       flex-direction: column;
       gap: 6rem;
 
-      @media only screen and (${devices.laptop}) {
-        flex-direction: row;
-        gap: 8rem;
-      }
-
       &--project {
-        margin-bottom: 336px;
+        display: flex;
+        margin-bottom: 33.6rem;
         position: relative;
 
-        &:nth-child(3) {
-          margin-top: 40px;
-        }
-
-        @media (min-width: 768px) {
-          &:nth-child(3) {
-            margin-top: 0px;
+        &:nth-child(odd) {
+          justify-content: flex-start;
+          .Experience__component--content {
+            right: 0;
           }
-          margin-bottom: 272px;
         }
 
-        @media (min-width: 1024px) {
-          margin-bottom: 124px;
+        &:nth-child(even) {
+          justify-content: flex-end;
+
+          .Experience__component--content {
+            left: 0;
+          }
+        }
+
+        &:nth-child(3) {
+          margin-top: 4rem;
+        }
+
+        @media only screen and (${devices.tablet}) {
+          &:nth-child(3) {
+            margin-top: 0;
+          }
+          margin-bottom: 27.2rem;
+        }
+
+        @media only screen and (${devices.laptop}) {
+          margin-bottom: 12.4rem;
         }
       }
     }
 
     &__component {
       &--image {
-        display: flex;
-        justify-content: flex-start;
         width: 100%;
         height: 100%;
         max-width: 100%;
         overflow: hidden;
 
-        @media (min-width: 1024px) {
-          width: 708px;
+        @media only screen and (${devices.laptop}) {
+          width: 70.8rem;
         }
 
-        @media (min-width: 1440px) {
-          width: 780px;
+        @media only screen and (${devices.laptopL}) {
+          width: 78rem;
         }
 
         &-component {
@@ -69,47 +78,39 @@ const ExperienceStyled = styled.div<Props>`
       &--content {
         position: absolute;
         top: 64%;
-        /* TODO: Usar de variables */
-        background-color: #fcfaff;
-        box-shadow: 0px 0px 10px rgba(229, 215, 254, 0.5);
-        /*   margin: 0px 20px; */
-        padding: 20px;
-        border-radius: 4px;
+        background-color: var(--palette-purple);
+        box-shadow: 0 0 1rem var(--palette-purpleShadow);
+        padding: 2rem;
+        border-radius: 0.4rem;
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
+        z-index: 80;
 
-        @media (min-width: 768px) {
+        @media only screen and (min-width: 768px) {
           top: 80%;
-          /*  margin: 0px 48px; */
         }
 
-        @media (min-width: 1024px) {
-          /* TODO: Usar de variables */
-          box-shadow: -5px 5px 10px rgba(202, 175, 253, 0.5);
-          padding: 24px;
-          width: 504px;
-          /*   margin: 0px 92px; */
-          right: 0;
+        @media only screen and (${devices.laptopL}) {
+          box-shadow: -0.5rem 0.5rem 1rem var(--palette-purpleShadow);
+          padding: 2.4rem;
+          width: 50.4rem;
           top: -12%;
         }
 
-        @media (min-width: 1440px) {
-          width: 648px;
+        @media only screen and (${devices.laptopL}) {
+          width: 64.8rem;
         }
 
         &-text {
-          color: #6838f2;
+          color: var(--palette-purple500);
           font-weight: 300;
-
-          @media (min-width: 1024px) {
-          }
         }
 
         &-position {
           font-weight: 500;
-          font-size: 20px;
-          color: #6838f2;
+          font-size: 2rem;
+          color: var(--palette-purple500);
         }
       }
 
@@ -117,27 +118,27 @@ const ExperienceStyled = styled.div<Props>`
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 1.6rem;
 
         &-chip {
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 10px;
+          gap: 1rem;
         }
 
         &-bg {
-          width: 40px;
-          height: 40px;
-          background-color: #e5d7fe;
+          width: 4rem;
+          height: 4rem;
+          background-color: var(--palette-purpleGray);
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
 
-          @media (min-width: 1024px) {
-            width: 48px;
-            height: 48px;
+          @media only screen and (${devices.laptop}) {
+            width: 4.8rem;
+            height: 4.8rem;
           }
         }
       }
