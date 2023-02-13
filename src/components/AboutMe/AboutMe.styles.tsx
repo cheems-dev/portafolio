@@ -1,5 +1,6 @@
-import { devices } from "@/utils/config/devices";
 import styled from "styled-components";
+
+import devices from "@/utils/config/devices";
 
 import { AboutMeStyledProps as Props } from "./AboutMe.types";
 

@@ -1,8 +1,8 @@
 import { createTheme } from "@mui/material";
-import variables from "../utils/variables";
 
 import dark from "./dark";
 import light from "./light";
+import variables from "../utils/variables";
 
 const { palette } = variables;
 

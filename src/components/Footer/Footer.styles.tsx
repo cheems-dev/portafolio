@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
-import { devices } from "@/utils/config/devices";
+import devices from "@/utils/config/devices";
 
-import { FooterProps as Props } from "./Footer.types";
-
-const Footer = styled.div<Props>`
+const Footer = styled.div`
   color: var(--palette-light);
   border-top: 0.1rem solid var(--palette-border);
 

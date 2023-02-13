@@ -19,7 +19,7 @@ const Button: React.FC<Props> = (props) => {
   };
 
   return (
-    <Styles className={`Button`}>
+    <Styles className={"Button"}>
       <button className={`Button ${styleClass()}`} disabled={disabled}>
         {startIcon}
         {children}

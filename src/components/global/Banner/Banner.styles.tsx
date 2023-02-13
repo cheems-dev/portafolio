@@ -1,5 +1,6 @@
-import variables from "@/styles/utils/variables";
 import styled from "styled-components";
+
+import variables from "@/styles/utils/variables";
 
 import { BannerStyledProps as Props } from "./Banner.types";
 

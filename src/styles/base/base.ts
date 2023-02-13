@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-import { devices } from "@/utils/config/devices";
+import devices from "@/utils/config/devices";
 
 const base = css`
   /* Normalization */

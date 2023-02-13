@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { devices } from "@/utils/config/devices";
+import devices from "@/utils/config/devices";
 
 import { ExperienceStyledProps as Props } from "./Experience.types";
 
