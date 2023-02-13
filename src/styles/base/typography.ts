@@ -1,5 +1,6 @@
-import { devices } from "@/utils/config/devices";
 import { css } from "styled-components";
+
+import { devices } from "@/utils/config/devices";
 
 const typography = css`
   @font-face {
@@ -130,6 +131,13 @@ const typography = css`
 
   span {
     display: block;
+  }
+
+  li,
+  span {
+    font-family: "Manrope-Small-Regular";
+    font-size: 1.4rem;
+    line-height: 2.8rem;
   }
 `;
 

@@ -1,5 +1,6 @@
-import { devices } from "@/utils/config/devices";
 import styled from "styled-components";
+
+import { devices } from "@/utils/config/devices";
 
 import { ExperienceStyledProps as Props } from "./Experience.types";
 
@@ -17,6 +18,7 @@ const ExperienceStyled = styled.div<Props>`
 
         &:nth-child(odd) {
           justify-content: flex-start;
+
           .Experience__component--content {
             right: 0;
           }
@@ -30,18 +32,15 @@ const ExperienceStyled = styled.div<Props>`
           }
         }
 
-        &:nth-child(3) {
-          margin-top: 4rem;
-        }
-
         @media only screen and (${devices.tablet}) {
-          &:nth-child(3) {
-            margin-top: 0;
-          }
           margin-bottom: 27.2rem;
         }
 
         @media only screen and (${devices.laptop}) {
+          margin-bottom: 24rem;
+        }
+
+        @media only screen and (${devices.laptopL}) {
           margin-bottom: 12.4rem;
         }
       }

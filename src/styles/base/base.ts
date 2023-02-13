@@ -1,5 +1,6 @@
-import { devices } from "@/utils/config/devices";
 import { css } from "styled-components";
+
+import { devices } from "@/utils/config/devices";
 
 const base = css`
   /* Normalization */
@@ -73,7 +74,8 @@ const base = css`
   }
 
   a {
-    text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: none;
+    all: unset;
   }
 
   ul[role="list"],
@@ -168,6 +170,10 @@ const base = css`
       &--center {
         display: flex;
         justify-content: center;
+      }
+
+      &--component {
+        width: 90vw;
       }
     }
 

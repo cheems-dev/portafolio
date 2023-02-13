@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-interface */
 // Interfaces and types from component TemplateContainer
 
 // Component Props

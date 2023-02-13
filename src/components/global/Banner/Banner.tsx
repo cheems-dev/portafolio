@@ -1,13 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 import Button from "@/components/global/Button/Button";
+import CONSTANTS from "@/utils/config/constants";
 
 import Styles from "./Banner.styles";
-import { BannerProps as Props } from "./Banner.types";
 
-const Banner: React.FC<Props> = (props) => {
+const { URL_LINKEDIN } = CONSTANTS;
+
+const Banner: React.FC = () => {
   return (
-    <Styles className={`Banner`}>
+    <Styles className="Banner">
       <div className="GlobalStyles__padding Banner__container">
         <div className="GlobalStyles__container Banner__container--banner">
           <div className="Banner__container--info">
@@ -20,9 +24,11 @@ const Banner: React.FC<Props> = (props) => {
               </h2>
             </div>
             <div className="Banner__container--info-buttons">
-              <Button type="text" endIcon={<LinkedInIcon fontSize="large" />}>
-                Mi perfil en LinkedIn
-              </Button>
+              <a target="_blank" href={URL_LINKEDIN} rel="noopener noreferrer">
+                <Button type="text" endIcon={<LinkedInIcon fontSize="large" />}>
+                  Mi perfil en LinkedIn
+                </Button>
+              </a>
               <Button
                 type="contained"
                 endIcon={<FileDownloadIcon fontSize="large" />}

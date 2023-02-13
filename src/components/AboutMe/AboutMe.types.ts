@@ -4,12 +4,7 @@ interface Item {
   title: string;
 }
 
-// Component Props
-export interface AboutMeProps {}
-
-export interface IconsComponentProps extends Item {}
-
-export interface SlideComponentProps extends Item {}
+export type SlideComponentProps = Item;
 
 // Styled Component Props
 export interface AboutMeStyledProps {

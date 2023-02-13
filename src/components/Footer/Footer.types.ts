@@ -1,9 +1,5 @@
 // Interfaces and types from component Footer
 
-
-// Component Props
-export interface FooterProps {}
-
 export interface IconCardProps {
   icon: React.ReactNode;
   msg?: string;

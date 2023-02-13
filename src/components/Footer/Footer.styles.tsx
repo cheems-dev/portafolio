@@ -1,15 +1,19 @@
-import { devices } from "@/utils/config/devices";
 import styled from "styled-components";
+
+import { devices } from "@/utils/config/devices";
 
 import { FooterProps as Props } from "./Footer.types";
 
 const Footer = styled.div<Props>`
+  color: var(--palette-light);
+  border-top: 0.1rem solid var(--palette-border);
+
   .Footer {
     &__subtitle {
       font-weight: 600;
       margin: 1.6rem 0;
     }
-    
+
     &__card__icon_text {
       display: flex;
       gap: 0.8rem;
@@ -17,22 +21,21 @@ const Footer = styled.div<Props>`
     }
 
     &__container {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      flex-direction: column;
+      margin: auto;
+      padding: 7rem 0;
 
-      @media (${devices.tablet}) {
-        flex-direction: row;
+      &--items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: column;
+
+        @media (${devices.tablet}) {
+          flex-direction: row;
+        }
       }
 
-      &--0 {
-        padding: 7rem 8rem;
-        color: var(--palette-text);
-        font-size: 1.4rem;
-      }
-
-      &--2 {
+      &--end {
         @media (${devices.tablet}) {
           align-items: flex-end;
         }
@@ -43,12 +46,12 @@ const Footer = styled.div<Props>`
       display: inline-block;
       height: 4rem;
       flex-grow: 1;
-      background-image:url(./logo.svg);
+      background-image: url(./logo.svg);
       background-size: contain;
       background-repeat: no-repeat;
       margin-bottom: 3.2rem;
     }
-    
+
     &__sections_links {
       display: flex;
       width: 100%;
@@ -72,7 +75,7 @@ const Footer = styled.div<Props>`
 
       & li {
         display: block;
-        width:50%;
+        width: 50%;
         margin-bottom: 2.4rem;
       }
 
@@ -86,17 +89,17 @@ const Footer = styled.div<Props>`
       gap: 2.4rem;
       flex-grow: 1;
       order: 2;
-      font-color: red;
       color: secondary;
-      fill: "green";
+      fill: var(--palette-light);
 
       @media (${devices.tablet}) {
         order: 1;
         gap: 1.2rem;
       }
 
-      & a {
-        color: var(--palette-text);
+      &--icon {
+        color: var(--palette-light);
+        cursor: pointer;
       }
     }
 
@@ -105,7 +108,7 @@ const Footer = styled.div<Props>`
       flex-wrap: wrap;
       order: 1;
       margin-bottom: 5.2rem;
-      
+
       @media (${devices.tablet}) {
         order: 2;
         margin-bottom: 0;
@@ -119,11 +122,10 @@ const Footer = styled.div<Props>`
       &__container {
         display: flex;
         flex-direction: column;
-        gap: 2.4rem;
+        gap: 1.6rem;
 
         @media (${devices.laptop}) {
           flex-direction: row;
-          gap: 4.4rem;
         }
       }
     }

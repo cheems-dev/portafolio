@@ -1,16 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import { projects } from "./Experience.helpers";
-import Styles from "./Experience.styles";
-import { ExperienceProps as Props } from "./Experience.types";
+
 import Button from "@/components/global/Button/Button";
 
-const Experience: React.FC<Props> = (props) => {
+import projects from "./Experience.helpers";
+import Styles from "./Experience.styles";
+
+const Experience: React.FC = () => {
   const renderContext = () => (
     <div>
-      <h2 className="AboutMe__title">
-        <span>02.</span> Mi trabajo
-      </h2>
+      <div>
+        <h3>02.</h3>
+        <h2 className="AboutMe__title">Mi trabajo</h2>
+      </div>
       <p>
         A lo largo del tiempo he aprendido una gran cantidad de
         <b> habilidades técnicas</b> en cada proyecto que he realizado, esto me
@@ -21,14 +23,19 @@ const Experience: React.FC<Props> = (props) => {
   );
 
   return (
-    <Styles className={`Experience`}>
+    <Styles className="Experience">
       <div className="GlobalStyles__container--center GlobalStyles__padding">
         <div className="GlobalStyles__container Experience__container">
           {renderContext()}
-          {/* TODO: Pending */}
           {projects.map((project, index) => {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const { name, image, year, link } = project;
-            const { type_project, description, technologies } = project;
+            // eslint-disable-next-line @typescript-eslint/naming-convention
+            const {
+              type_project: typeProject,
+              description,
+              technologies,
+            } = project;
 
             return (
               <div className="Experience__container--project" key={index}>
@@ -38,7 +45,7 @@ const Experience: React.FC<Props> = (props) => {
                       {name} - {year}
                     </p>
                     <p className="Experience__component--content-position">
-                      {type_project}
+                      {typeProject}
                     </p>
                   </div>
                   <p className="Experience__component--content-text">
@@ -71,7 +78,7 @@ const Experience: React.FC<Props> = (props) => {
                   <img
                     className="Experience__component--image-component"
                     src={`/projects/feactured/${image}`}
-                    alt={`${image} - ${type_project}`}
+                    alt={`${image} - ${typeProject}`}
                   />
                 </div>
               </div>

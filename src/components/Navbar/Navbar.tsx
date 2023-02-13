@@ -1,24 +1,19 @@
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import Button from "@/components/global/Button/Button";
 import Image from "next/image";
 
-import Styles from "./Navbar.styles";
-import { NavbarProps as Props } from "./Navbar.types";
+import Button from "@/components/global/Button/Button";
 
-const Navbar: React.FC<Props> = (props) => {
-  return (
-    <Styles className={`Navbar`}>
-      <div className="Navbar__component">
-        <Image src="./logo.svg" alt="logo" width={120} height={40} />
-        <Button
-          type="contained"
-          endIcon={<ChevronRightIcon fontSize="large" />}
-        >
-          Trabajemos juntos
-        </Button>
-      </div>
-    </Styles>
-  );
-};
+import Styles from "./Navbar.styles";
+
+const Navbar: React.FC = () => (
+  <Styles className="Navbar">
+    <div className="GlobalStyles__container--component Navbar__component">
+      <Image src="./logo.svg" alt="logo" width={120} height={40} />
+      <Button type="contained" endIcon={<ChevronRightIcon fontSize="large" />}>
+        Trabajemos juntos
+      </Button>
+    </div>
+  </Styles>
+);
 
 export default Navbar;

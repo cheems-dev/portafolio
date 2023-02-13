@@ -3,10 +3,9 @@ import { SwiperSlide } from "swiper/react";
 import { IconsComponent, SlideComponent } from "./AboutMe.helpers";
 import { items, softSkills } from "./AboutMe.helpers";
 import Styles from "./AboutMe.styles";
-import { AboutMeProps as Props } from "./AboutMe.types";
 import SwiperCards from "../global/SwiperCards/SwiperCards";
 
-const AboutMe: React.FC<Props> = (props) => {
+const AboutMe: React.FC = () => {
   const renderSwiper = () => (
     <SwiperCards>
       {softSkills.map((skill, index) => (
@@ -21,13 +20,14 @@ const AboutMe: React.FC<Props> = (props) => {
   );
 
   return (
-    <Styles className={`AboutMe`}>
+    <Styles className="AboutMe">
       <div className="GlobalStyles__padding AboutMe__container">
         <div className="GlobalStyles__container AboutMe__container--global">
           <div className="AboutMe__container--aboutMe">
-            <h2 className="AboutMe__title">
-              <span>01.</span> Sobre mí
-            </h2>
+            <div>
+              <h3>01.</h3>
+              <h2 className="AboutMe__title">Sobre mí</h2>
+            </div>
             <div className="AboutMe__container--aboutMe-text">
               <p>
                 Me llamo <b>Luis Ccalluchi Lopez,</b> soy de{" "}

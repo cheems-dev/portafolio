@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import variables from "@/styles/utils/variables";
 
 import { NavbarStyledProps as Props } from "./Navbar.types";
@@ -22,7 +23,6 @@ const NavbarStyled = styled.div<Props>`
     &__component {
       display: flex;
       justify-content: space-between;
-      width: 90vw;
     }
   }
 `;

@@ -1,7 +1,11 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { css } from "styled-components";
 
 const getPairs = (cssFields: any, prefix: string): any => {
-  let styles = ``;
+  let styles = "";
+
+  // eslint-disable-next-line no-restricted-syntax
   for (const el in cssFields) {
     if (typeof cssFields[el] === "object") {
       styles += getPairs(cssFields[el], prefix ? `${prefix}-${el}` : el);

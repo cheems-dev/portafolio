@@ -1,30 +1,5 @@
-/* 
-  TODO: Template
- {
-    image: "aero-administrator.png",
-    name: "Aero Administrator",
-    year: "2022",
-    type_project: "Frontend Developer",
-    description:
-      "Desarrollo de Plataforma Web Responsive para dispositivos mobiles y de escritorio que permite guiar al usuario en un proceso donde podra generar una solicitud para la obtención de un crédito digital.",
-    technologies: [
-      {
-        techId: 1,
-        tech_title: "Material UI",
-        tech_image: "material-ui.svg",
-      },
-      { techId: 2, tech_title: "Javascript", tech_image: "js.png" },
-      { techId: 3, tech_title: "React", tech_image: "react.svg" },
-      {
-        techId: 4,
-        tech_title: "Styled Components",
-        tech_image: "styled-components.png",
-      },
-    ],
-    link: "https://aeroadministrator.vercel.app/",
-  }*/
-
-export const projects = [
+/* eslint-disable max-len */
+const projects = [
   {
     image: "live-subastas.png",
     name: "Live Subastas",
@@ -133,3 +108,5 @@ export const projects = [
     link: "https://aeroadministrator.vercel.app/",
   },
 ];
+
+export default projects;
