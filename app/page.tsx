@@ -3,11 +3,7 @@
 import HomeContainerContainer from "@/containers/Home/Home.container";
 
 function page() {
-  return (
-    <main>
-      <HomeContainerContainer />
-    </main>
-  );
+  return <HomeContainerContainer />;
 }
 
 export default page;

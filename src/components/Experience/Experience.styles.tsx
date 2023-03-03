@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
+import mixins from "@/styles/utils/mixins";
 import devices from "@/utils/config/devices";
 
 import { ExperienceStyledProps as Props } from "./Experience.types";
+
+const { colors } = mixins;
 
 const ExperienceStyled = styled.div<Props>`
   .Experience {
@@ -102,14 +105,13 @@ const ExperienceStyled = styled.div<Props>`
         }
 
         &-text {
-          color: var(--palette-purple500);
-          font-weight: 300;
+          ${colors.primaryColor}
         }
 
         &-position {
-          font-weight: 500;
+          font-weight: 600;
           font-size: 2rem;
-          color: var(--palette-purple500);
+          ${colors.primaryColor}
         }
       }
 

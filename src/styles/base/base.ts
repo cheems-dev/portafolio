@@ -34,8 +34,6 @@ const base = css`
   }
 
   body {
-    /* TODO: PENDING */
-    /*   background-color: var(--palette-secondary); */
     text-rendering: optimizeSpeed;
     line-height: 1.2;
   }
@@ -44,6 +42,7 @@ const base = css`
   #root {
     min-height: 100%;
     min-width: 100%;
+    font-family: var(--primary-font);
   }
 
   *::-webkit-scrollbar {

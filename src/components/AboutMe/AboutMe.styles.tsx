@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
+import mixins from "@/styles/utils/mixins";
 import devices from "@/utils/config/devices";
 
 import { AboutMeStyledProps as Props } from "./AboutMe.types";
+
+const { colors } = mixins;
 
 const AboutMeStyled = styled.div<Props>`
   .AboutMe {
@@ -32,7 +35,7 @@ const AboutMeStyled = styled.div<Props>`
           display: flex;
           flex-direction: column;
           gap: 1rem;
-          border-bottom: 0.1rem solid var(--palette-border);
+          border-bottom: 0.1rem solid ${colors.border()};
         }
 
         &-stack {
@@ -58,7 +61,7 @@ const AboutMeStyled = styled.div<Props>`
         }
 
         &-circle {
-          background-color: var(--palette-purple100);
+          background-color: var(--palette-purple50);
           padding: 0.4rem;
           border-radius: 50%;
           padding: 0.8rem;
@@ -73,7 +76,7 @@ const AboutMeStyled = styled.div<Props>`
         }
 
         &-title {
-          color: var(--palette-white);
+          ${colors.primaryText(false)}
           text-align: center;
         }
 

@@ -2,72 +2,28 @@ import { css } from "styled-components";
 
 import devices from "@/utils/config/devices";
 
+import mixins from "../utils/mixins";
+
+const { colors, fonts } = mixins;
+
 const typography = css`
-  @font-face {
-    font-family: "Manrope-Bigger-Regular";
-    src: url("/fonts/manrope/Manrope-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Manrope-Bigger-Semibold";
-    src: url("/fonts/manrope/Manrope-SemiBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Manrope-Normal-Regular";
-    src: url("/fonts/manrope/Manrope-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Manrope-Normal-Semibold";
-    src: url("/fonts/manrope/Manrope-SemiBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Manrope-Small-Regular";
-    src: url("/fonts/manrope/Manrope-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Manrope-Small-Semibold";
-    src: url("/fonts/manrope/Manrope-SemiBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Rota-Bold";
-    src: url("/fonts/rota/Rota-Bold.otf") format("opentype");
-    font-style: normal;
-    font-display: swap;
-  }
-
   body {
-    font-family: "Manrope-Bigger-Regular", "Manrope-Bigger-Semibold",
-      "Manrope-Normal-Regular", "Manrope-Normal-Semibold",
-      "Manrope-Small-Regular", "Manrope-Small-Semibold", "Rota-Bold", sans-serif;
+    font-family: sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    ${colors.headerText};
+  }
+
   h1 {
-    font-family: "Rota-Bold";
+    ${fonts.rotaBold}
     font-size: 3.2rem;
     line-height: 5.6rem;
     text-transform: capitalize;
@@ -79,7 +35,7 @@ const typography = css`
   }
 
   h2 {
-    font-family: "Rota-Bold";
+    ${fonts.rotaBold}
     font-size: 3.2rem;
     line-height: 3.2rem;
     text-transform: none;
@@ -91,7 +47,7 @@ const typography = css`
   }
 
   h3 {
-    font-family: "Rota-Bold";
+    ${fonts.rotaBold}
     font-size: 3.2rem;
     line-height: 4.5rem;
     text-transform: capitalize;
@@ -103,30 +59,32 @@ const typography = css`
   }
 
   h4 {
-    font-family: "Rota-Bold";
+    ${fonts.rotaBold}
     font-size: 2.4rem;
     line-height: 3.4rem;
     text-transform: capitalize;
   }
 
-  p {
-    margin: 0;
-    font-family: "Manrope-Normal-Regular";
-    font-size: 1.6rem;
-    line-height: 3.2rem;
-    font-weight: 400;
-    color: var(--palette-text);
+  p,
+  button {
+    ${colors.primaryText()};
+  }
 
-    @media only screen and (${devices.laptop}) {
-      line-height: 2.4rem;
-      font-weight: 300;
-    }
+  p {
+    ${fonts.manropeRegular}
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 
   button {
-    font-family: "Manrope-Normal-Semibold";
+    ${fonts.manropeSemiBold}
     font-size: 1.6rem;
-    line-height: 3.2rem;
+    line-height: 2.4rem;
+
+    @media only screen and (${devices.laptopXL}) {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
   }
 
   span {
@@ -135,7 +93,8 @@ const typography = css`
 
   li,
   span {
-    font-family: "Manrope-Small-Regular";
+    ${colors.headerText()};
+    ${fonts.manropeRegular}
     font-size: 1.4rem;
     line-height: 2.8rem;
   }

@@ -19,7 +19,7 @@ const Button = styled.div<Props>`
     box-shadow: ${shadows.shadow};
 
     &__outlined {
-      border: 0.16rem solid var(--palette-purple500);
+      border: 0.18rem solid var(--palette-purple500);
       background-color: inherit;
       color: var(--palette-purple500);
     }

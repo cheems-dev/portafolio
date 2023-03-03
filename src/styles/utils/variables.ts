@@ -13,17 +13,26 @@ const palette = {
   purpleShadow: "hsla(262, 95%, 92%, 0.5)",
   purpleGray: "hsl(262, 95%, 92%)",
 
+  dark100: "hsla(0, 0%, 19%, 1)",
+  dark200: "hsla(0, 0%, 38%, 1)",
+  dark300: "hsla(0, 0%, 57%, 1)",
+  dark400: "hsla(0, 0%, 76%, 1)",
+  dark500: "hsla(0, 0%, 89%, 1)",
+  dark600: "hsla(0, 0%, 93%, 1)",
+  dark700: "hsla(240, 11%, 96%, 1)",
+  dark800: "hsla(0, 0%, 100%, 1)",
+
   purple: "hsl(264, 100%, 99%)",
-  purple50: "hsla(277, 82%, 97%, 1)",
-  purple100: "hsl(269, 84%, 88%, 1)",
-  purple200: "hsl(269, 85%, 76%, 1)",
-  purple300: "hsl(269, 85%, 65%, 1)",
-  purple400: "hsl(269, 85%, 53%, 1)",
-  purple500: "hsl(269, 85%, 41%, 1)",
-  purple600: "hsl(269, 85%, 33%, 1)",
-  purple700: "hsl(269, 86%, 25%, 1)",
-  purple800: "hsl(270, 86%, 16%, 1)",
-  purple900: "hsl(268, 86%, 8%, 1)",
+  purple50: "hsla(257, 89%, 93%, 1)",
+  purple100: "hsla(256, 89%, 86%, 1)",
+  purple200: "hsla(256, 89%, 79%, 1)",
+  purple300: "hsla(256, 87%, 72%, 1)",
+  purple400: "hsla(256, 88%, 65%, 1)",
+  purple500: "hsla(255, 88%, 58%, 1)",
+  purple600: "hsla(256, 88%, 46%, 1)",
+  purple700: "hsla(256, 88%, 35%, 1)",
+  purple800: "hsla(256, 88%, 23%, 1)",
+  purple900: "hsla(255, 87%, 12%, 1)",
 
   blue50: "hsla(208, 87%, 97%, 1)",
   blue100: "hsla(206, 88%, 94%, 1)",
@@ -58,8 +67,6 @@ const palette = {
   red800: "hsla(350, 81%, 22%, 1)",
   red900: "hsla(350, 81%, 12%, 1)",
 };
-
-const fonts = {};
 
 export const columns = 12;
 
@@ -119,6 +126,7 @@ const gradients = {
   gradientBanner:
     "linear-gradient(90deg, hsla(328, 75%, 45%, 1) 0%, hsla(269, 85%, 41%, 1) 100%)",
 };
-const variables = { palette, fonts, sizes, shadows, gradients };
+
+const variables = { palette, sizes, shadows, gradients };
 
 export default variables;

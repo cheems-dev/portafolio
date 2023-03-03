@@ -55,11 +55,13 @@ const BannerStyled = styled.div<Props>`
     }
 
     &__text {
+      color: var(--palette-dark800);
+
       &--title {
-        color: var(--palette-purple700);
+        color: var(--palette-dark800);
 
         &-secondary {
-          color: var(--palette-purple50);
+          color: var(--palette-dark800);
         }
       }
 

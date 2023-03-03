@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
 ${(props) => getCSSVariables(props.theme || themes.light)}
 ${base}
 ${typography}
-    ${animations}
+${animations}
 `;
 
 export default GlobalStyles;
