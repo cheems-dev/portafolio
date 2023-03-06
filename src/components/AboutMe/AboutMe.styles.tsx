@@ -35,7 +35,6 @@ const AboutMeStyled = styled.div<Props>`
           display: flex;
           flex-direction: column;
           gap: 1rem;
-          border-bottom: 0.1rem solid ${colors.border()};
         }
 
         &-stack {
@@ -84,6 +83,10 @@ const AboutMeStyled = styled.div<Props>`
           margin: auto;
           animation: rotate-icon 4s ease-in-out alternate-reverse infinite;
         }
+      }
+
+      &--border {
+        border-bottom: 0.16rem solid ${colors.border()};
       }
     }
   }

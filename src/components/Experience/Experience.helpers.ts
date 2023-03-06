@@ -6,7 +6,7 @@ const projects = [
     year: "2022",
     type_project: "Frontend Developer",
     description:
-      "Plataforma Web Responsive de subastas en tiempo real que guía al usuario poder registrarse en una subasta para poder ofertar y contando la opción de ser subastador para poder crear una subasta con sus respectivos lotes.",
+      "Plataforma Web de subastas en tiempo real, contando con varias secciones como perfil de subastador y vendedor, métodos de pagos, entre otros, siendo lo principal  la creación de lotes y detalles, precios e imágenes, guiando a los subastadores poder registrarse en una subasta y ofertando de acuerdo las normas establecidas por el vendedor.",
     technologies: [
       { techId: 1, tech_title: "React", tech_image: "react.svg" },
       { techId: 2, tech_title: "Typescript", tech_image: "ts.svg" },
@@ -35,7 +35,7 @@ const projects = [
     year: "2022",
     type_project: "Frontend Developer",
     description:
-      "Desarrollo de Plataforma Web Responsive para dispositivos mobiles y de escritorio enfocado al sector de Banca que permite guiar al usuario en un proceso donde podrá hacer pago de una deuda haciendo uso de IziPay y por el lado del administrador poder tener un panel de opciones y control de los pagos realizados mediante filtros de búsqueda o informes de Excel o PDF.",
+      "Plataforma Web enfocado al sector de Banca, su principal característica es la facilidad de pagos a los usuarios que tienen deudas pendientes, mostrando a detalles como fecha de vencimiento, saldo pendiente y estado de la deuda. El panel del administrador tiene funcionalidades de control de pagos o deudas mediante filtros de búsqueda o informes de Excel o PDF.",
     technologies: [
       {
         techId: 1,
@@ -63,7 +63,7 @@ const projects = [
     year: "2022",
     type_project: "Frontend Developer",
     description:
-      "Desarrollo de Plataforma Web Responsive que integra servicios de diferentes proveedores de nube para el despliegue de proyectos como Wordpress, Laravel, Node.js entre otros. Ofreciendo adicionalmente un panel de detalles del estado del servidor y funcionalidades.",
+      "Plataforma Web Responsive que integra servicios de diferentes proveedores de nube para aprovechar al máximo el uso de sus servicios para proyectos como Wordpress y  Laravel, Node.js entre otros. Cuenta que una vista de detalles del servidor como métricas en tiempo real integradas con Chart.js donde el usuario puede ver el estado de su servidor.",
     technologies: [
       {
         techId: 1,
@@ -81,6 +81,11 @@ const projects = [
         tech_title: "Styled Components",
         tech_image: "styled-components.png",
       },
+      {
+        techId: 5,
+        tech_title: "Chart JS",
+        tech_image: "chart-js.png",
+      },
     ],
     link: "https://ayphu.com",
   },
@@ -90,7 +95,7 @@ const projects = [
     year: "2022",
     type_project: "Frontend Developer",
     description:
-      "Desarrollo de una aplicación web enfocado en el sector de Aeronáutica contando con un área para la administración de usuarios registrados y con una landing page del evento con varias secciones.",
+      "Plataforma Web Responsive enfocada al área de aeronáutica contiene landing page  promocionando  el evento a FIAL 2023 contando con secciones como cronograma, antecedentes, preguntas y respuestas, expositores y organizaciones. Adicionalmente, contiene un panel administrativo de participantes, expositores y cursos.",
     technologies: [
       {
         techId: 1,
@@ -103,6 +108,11 @@ const projects = [
         techId: 4,
         tech_title: "Styled Components",
         tech_image: "styled-components.png",
+      },
+      {
+        techId: 5,
+        tech_title: "Swiper.js",
+        tech_image: "swiper.png",
       },
     ],
     link: "https://aeroadministrator.vercel.app/",

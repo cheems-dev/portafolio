@@ -1,3 +1,5 @@
+import { useId } from "react";
+
 import { SwiperSlide } from "swiper/react";
 
 import { IconsComponent, SlideComponent } from "./AboutMe.helpers";
@@ -6,10 +8,12 @@ import Styles from "./AboutMe.styles";
 import SwiperCards from "../global/SwiperCards/SwiperCards";
 
 const AboutMe: React.FC = () => {
+  const id = useId();
+
   const renderSwiper = () => (
     <SwiperCards>
       {softSkills.map((skill, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={`${id}-${index}`}>
           <SlideComponent
             src={`/soft-skill/${skill.image}`}
             title={skill.title}
@@ -43,6 +47,7 @@ const AboutMe: React.FC = () => {
                 aprendiendo sobre la Arquitectura de <b>Micro-Frontend.</b>
               </p>
             </div>
+            <span className="AboutMe__component--border" />
             <div className="AboutMe__container--aboutMe-stack">
               {items.map((item, index) => (
                 <IconsComponent

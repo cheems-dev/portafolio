@@ -1,0 +1,17 @@
+.swiperSlide {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+.swiperSlide .swiper-slide {
+  padding-top: 6rem;
+}
+
+.swiperSlide .swiper-pagination-bullet {
+  background-color: var(--palette-purple400);
+}
+
+.swiperSlide .swiper-pagination-bullet-active {
+  background-color: var(--palette-purple500);
+}

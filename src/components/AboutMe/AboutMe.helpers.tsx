@@ -1,10 +1,9 @@
 import Image from "next/image";
 
-import { IconsComponentProps, SlideComponentProps } from "./AboutMe.types";
+import { SlideComponentProps } from "./AboutMe.types";
 
-export const IconsComponent: React.FC<IconsComponentProps> = (props) => {
+export const IconsComponent: React.FC<SlideComponentProps> = (props) => {
   const { src, title } = props;
-
   return (
     <div className="AboutMe__component--icon-container">
       <div className="AboutMe__component--icon-circle">
@@ -55,7 +54,7 @@ export const items = [
     title: "CSS",
   },
   {
-    icon: "js.png",
+    icon: "js.svg",
     title: "Javascript",
   },
   {
@@ -89,5 +88,9 @@ export const items = [
   {
     icon: "react-query.svg",
     title: "React Query",
+  },
+  {
+    icon: "sass.svg",
+    title: "Sass",
   },
 ];

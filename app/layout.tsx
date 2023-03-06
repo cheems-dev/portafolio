@@ -6,6 +6,7 @@ import localFont from "@next/font/local";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import GlobalStyles from "@/styles/base";
+import "swiper/css";
 
 interface RootLayoutProps {
   children: React.ReactNode;

@@ -3,9 +3,8 @@ import { Swiper } from "swiper/react";
 
 import { SwiperCardsProps as Props } from "./SwiperCards.types";
 
-import "swiper/css";
 import "swiper/css/effect-cards";
-import "./SwiperCard.css";
+import "./index.css";
 
 const SwiperCards: React.FC<Props> = (props) => {
   const { children } = props;
@@ -19,6 +18,7 @@ const SwiperCards: React.FC<Props> = (props) => {
         delay: 4000,
         disableOnInteraction: false,
       }}
+      className="swiperCard"
     >
       {children}
     </Swiper>

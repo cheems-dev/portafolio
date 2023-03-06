@@ -16,10 +16,22 @@ const ExperienceStyled = styled.div<Props>`
 
       &--project {
         display: flex;
-        margin-bottom: 33.6rem;
         position: relative;
+        flex-direction: column-reverse;
 
-        &:nth-child(odd) {
+        @media screen and (${devices.tablet}) {
+          margin-bottom: 34rem;
+        }
+
+        @media screen and (min-width: 1040px) {
+          margin-bottom: 27rem;
+        }
+
+        @media screen and (${devices.laptopL}) {
+          margin-bottom: 3.2rem;
+        }
+
+        &-isOdd {
           justify-content: flex-start;
 
           .Experience__component--content {
@@ -27,24 +39,12 @@ const ExperienceStyled = styled.div<Props>`
           }
         }
 
-        &:nth-child(even) {
+        &-isEven {
           justify-content: flex-end;
 
           .Experience__component--content {
             left: 0;
           }
-        }
-
-        @media only screen and (${devices.tablet}) {
-          margin-bottom: 27.2rem;
-        }
-
-        @media only screen and (${devices.laptop}) {
-          margin-bottom: 24rem;
-        }
-
-        @media only screen and (${devices.laptopL}) {
-          margin-bottom: 12.4rem;
         }
       }
     }
@@ -78,16 +78,20 @@ const ExperienceStyled = styled.div<Props>`
       }
 
       &--content {
-        position: absolute;
-        top: 64%;
+        position: block;
         background-color: var(--palette-purple);
         box-shadow: 0 0 1rem var(--palette-purpleShadow);
-        padding: 2rem;
+        padding: 2.4rem 2rem;
         border-radius: 0.4rem;
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
-        z-index: 80;
+
+        @media only screen and (${devices.tablet}) {
+          position: absolute;
+          top: 64%;
+          z-index: 4;
+        }
 
         @media only screen and (min-width: 768px) {
           top: 80%;
@@ -108,6 +112,16 @@ const ExperienceStyled = styled.div<Props>`
           ${colors.primaryColor}
         }
 
+        &-paragraph {
+          max-height: 7.6rem;
+          overflow-y: scroll;
+
+          @media only screen and (${devices.laptop}) {
+            overflow-y: hidden;
+            max-height: auto;
+          }
+        }
+
         &-position {
           font-weight: 600;
           font-size: 2rem;
@@ -119,7 +133,11 @@ const ExperienceStyled = styled.div<Props>`
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 1.6rem;
+        gap: 2.4rem;
+
+        @media only screen and (${devices.laptop}) {
+          gap: 1.6rem;
+        }
 
         &-chip {
           display: flex;
